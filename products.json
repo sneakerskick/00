@@ -1,0 +1,57 @@
+{
+    "categories": [
+      {
+        "name": "Nike",
+        "products": [
+          {
+            "id": 1,
+            "image": "img/aj1.jpg",
+            "productText": {
+              "title": "Nike Air Jordan 1",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: 36, 37, 38, 39, ... 45."
+            },
+            "qcImages": [
+              "img/aj1.jpg",
+              "img/af1.jpg",
+              "img/aj4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "image": "img/af1.jpg",
+            "productText": {
+              "title": "Nike Air Force 1",
+              "description": "Comfortable and durable sneaker",
+              "size": "shoe size: 40, 41, 42, 43, ... 48."
+            },
+            "qcImages": [
+              "img/af1.jpg",
+              "img/aj1.jpg",
+              "img/dunklow.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Adidas",
+        "products": [
+          {
+            "id": 3,
+            "image": "img/samba.jpeg",
+            "productText": {
+              "title": "Adidas Samba",
+              "description": "Classic and versatile sneaker",
+              "size": "shoe size: 38, 39, 40, 41, ... 46."
+            },
+            "qcImages": [
+              "img/samba.jpeg",
+              "img/forum.jpg",
+              "img/dunklow.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

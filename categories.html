@@ -15,8 +15,8 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Categories <span>&#9660;</span> </a>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="categories.html?category=Nike">Categories <span>&#9660;</span> </a>
               <div class="categories-submenu">
                 <ul>
                   <li><a href="">Category 1</a></li>
@@ -27,11 +27,12 @@
                 </ul>
               </div>
               </li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
     </header>
 
+    <!-- Category Links Navigation -->
     <div class="category-links">
         <ul>
             <li><a href="">Air Jordan 1</a></li>
@@ -47,112 +48,51 @@
         <h5><a href="">Home</a> > <a href="">Current Category</a></h5>
     </div>
 
-    <div class="product-grid">
-        <div class="card">
-            <a href="">
-                <img src="img/aj1.jpg" alt="img1">
+     <!-- Category Products Section -->
+  <div class="product-grid" id="productGrid">
+    <!-- Products will be inserted dynamically based on the selected category -->
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryName = urlParams.get("category");
+  
+      if (!categoryName) {
+        console.error("No category provided");
+        return;
+      }
+  
+      // Fetch the product data from the JSON file
+      fetch("products.json")
+        .then(response => response.json())
+        .then(data => {
+          const category = data.categories.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
+          if (!category) {
+            console.error("Category not found");
+            return;
+          }
+          displayCategoryProducts(category);
+        })
+        .catch(error => console.error("Error fetching product data:", error));
+  
+      // Display products for a specific category
+      function displayCategoryProducts(category) {
+        const productGrid = document.getElementById("productGrid");
+        productGrid.innerHTML = ""; // Clear existing content
+        category.products.forEach(product => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+            <a href="detail.html?id=${product.id}">
+              <img src="${product.image}" alt="${product.productText.title}">
             </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/af1.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj1bjt.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj4.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/dunklow.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/forum.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/samba.jpeg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj1.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/af1.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj1bjt.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj4.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/dunklow.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/forum.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/samba.jpeg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj1.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/af1.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj1bjt.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/aj4.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/dunklow.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/forum.jpg" alt="img1">
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="img/samba.jpeg" alt="img1">
-            </a>
-        </div>
-    </div>
+          `;
+          productGrid.appendChild(card);
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>

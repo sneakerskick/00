@@ -1,4 +1,4 @@
-
+// Flash Sale Slider
   const slider = document.querySelector('.flash-sale-products');
   let isDown = false;
   let startX;
@@ -29,3 +29,4 @@
     slider.scrollLeft = scrollLeft - walk;
   });
 
+// fetch details for the detail.html page

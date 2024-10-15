@@ -16,8 +16,8 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Categories <span>&#9660;</span> </a>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="categories.html?category=Nike">Categories <span>&#9660;</span> </a>
               <div class="categories-submenu">
                 <ul>
                   <li><a href="">Category 1</a></li>
@@ -28,7 +28,7 @@
                 </ul>
               </div>
               </li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
     </header>
@@ -39,33 +39,79 @@
     </div>
 
     <!-- Product Detail Section -->
-    <div class="product-detail-container">
-      <div class="product-picture">
-        <img src="img/aj4.jpg" alt="Img">
-      </div>
-      <div class="product-text">
-        <h2>Product detail</h2>
-            <p>Available for budget and best quality</p>
-            <p>shoe size: 30, 31, 32, 33, ... 43.</p>
-      </div>
-      <div class="additional-information">
-        <p>. Item will be delivered in one week if it is not in stock</p>
-        <p>. share us the item for price</p>
-      </div>
+  <div class="product-detail-container">
+    <div class="product-picture">
+      <img id="productImage" src="" alt="Product Image">
     </div>
+    <div class="product-text">
+      <h2 id="productTitle"></h2>
+      <p id="productDescription"></p>
+      <p id="productSize"></p>
+    </div>
+    <div class="additional-information">
+      <p>. Item will be delivered in one week if it is not in stock</p>
+      <p>. Share with us for the price</p>
+    </div>
+  </div>
 
-    <!-- Quality Control Pictures -->
-     <section id="qc-section">
-      <h2>Quality Control Pictures</h2>
-      <div class="qc-img-container">
-        <img src="img/aj4.jpg" alt="">
-        <img src="img/af1.jpg" alt="">
-        <img src="img/aj1bjt.jpg" alt="">
-        <img src="img/aj1.jpg" alt="">
-        <img src="img/dunklow.jpg" alt="">
-        <img src="img/samba.jpeg" alt="">
-        <img src="img/forum.jpg" alt="">
-      </div>
-     </section>
+  <!-- Quality Control Pictures -->
+  <section id="qc-section">
+    <h2>Quality Control Pictures</h2>
+    <div class="qc-img-container" id="qcImgContainer">
+      <!-- QC images will be inserted here dynamically -->
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+  
+      if (!productId) {
+        console.error("No product ID provided");
+        return;
+      }
+  
+      // Fetch the product data from the JSON file
+      fetch("products.json")
+        .then(response => response.json())
+        .then(data => {
+          const product = findProductById(data.categories, parseInt(productId));
+          if (!product) {
+            console.error("Product not found");
+            return;
+          }
+          displayProductDetails(product);
+        })
+        .catch(error => console.error("Error fetching product data:", error));
+  
+      // Find a product by ID across all categories
+      function findProductById(categories, id) {
+        for (const category of categories) {
+          const product = category.products.find(item => item.id === id);
+          if (product) return product;
+        }
+        return null;
+      }
+  
+      // Display the product details on the detail page
+      function displayProductDetails(product) {
+        document.getElementById("productImage").src = product.image;
+        document.getElementById("productTitle").textContent = product.productText.title;
+        document.getElementById("productDescription").textContent = product.productText.description;
+        document.getElementById("productSize").textContent = product.productText.size;
+  
+        // Populate the QC images section
+        const qcImgContainer = document.getElementById("qcImgContainer");
+        qcImgContainer.innerHTML = ""; // Clear any existing content
+        product.qcImages.forEach(imgSrc => {
+          const imgElement = document.createElement("img");
+          imgElement.src = imgSrc;
+          qcImgContainer.appendChild(imgElement);
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>
