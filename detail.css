@@ -1,0 +1,43 @@
+:root{
+    --primary: #49bc85;
+    --secondary: #f3f7f7;
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+/* current-product  */
+.current-product{
+    width: 90%;
+    margin: 2em auto 0;
+}
+/* Product detail style */
+.product-detail-container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 
+    "picture title"
+    "info info"
+    / 30% 1fr;
+    align-items: center;
+    column-gap: 20px;
+}
+.product-picture{
+    grid-area: picture;
+}
+.product-text{
+    grid-area: title;
+}
+.additional-information{
+    grid-area: info;
+}
+/* Qc Pictures */
+#qc-section{
+    width: 90%;
+    margin: 0 auto;
+}
+.qc-img-container img{
+    margin: 20px 5px;
+}

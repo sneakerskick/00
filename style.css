@@ -1,0 +1,219 @@
+/* variables */
+:root{
+    --primary: #49bc85;
+    --secondary: #f3f7f7;
+    overflow-x: hidden;
+}
+/* reset */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* base styles */
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* mobile styles */
+/* header styles */
+.top-bar{
+    display: flex;
+    background-color: var(--primary);
+    color: #fff;
+}
+.top-bar p{
+    margin: 10px;
+}
+.top-bar p:nth-child(2){
+    margin: 10px auto;
+}
+nav{
+    background-color: var(--secondary);
+    color: #000;
+}
+nav ul {
+    display: flex;
+    margin: 0px;
+    padding: 15px;
+}
+nav ul li{
+    padding-right: 10px;
+}
+.categories-submenu{
+   display: none;
+}
+nav ul li:nth-child(2):hover .categories-submenu{
+    display: block;
+    position: absolute;
+    padding: 10px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 1px solid #000;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+nav ul li:nth-child(2):hover .categories-submenu ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+nav ul li:nth-child(2):hover .categories-submenu ul li{
+    padding-bottom: 10px;
+}
+.categories-submenu ul li a:hover{
+    color: var(--primary);
+}
+/* .search-section{
+    display: flex;
+    justify-content: flex-end;
+}
+.search-section input{
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #000;
+} */
+/* flash sale section */
+.flash-sale-banner {
+
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--secondary);
+    margin: 20px auto;
+    padding: 20px;
+    align-items: center; /* Vertically centers the content */
+}
+
+.flash-sale-banner-txt {
+    width: 50%;
+    text-align: center;
+}
+.flash-sale-banner-txt h1{
+    font-size: 2em;
+}
+.flash-sale-banner-txt a{
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+
+}
+
+.flash-sale-banner-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a cool shadow effect */
+}
+
+.flash-sale-banner-img img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Ensures the image keeps its aspect ratio and covers the entire container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+.flash-sale-banner-img img:hover {
+    transform: scale(1.05); /* Slightly zooms the image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow on hover */
+}
+
+.flash-sale-products {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.flash-sale-products::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+} 
+
+.flash-sale-products .product-card {
+    min-width: 8em;
+    height: 10em;
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevents the card from shrinking */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.flash-sale-products a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flash-sale-products img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* categories section */
+.category-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.category-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+.category-products .product-card{
+    flex: 1 0 151px;
+}
+.category-products .product-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a.see-more{
+    text-align: center;
+    margin: 15px auto;
+    display: block;
+    font-size: 1.1em;
+    color: #000;
+}
+footer{
+    color: #fff;
+    background-color: var(--primary);
+    text-align: center;
+    padding: 5px 0;
+}
+footer p{
+    margin: 4px 0;
+    padding: 0;
+}
+/* Contact Us Page */
+#contact-section{
+    width: fit-content;
+    padding: 2em;
+    margin: 8em auto;
+    background-color: var(--secondary);
+    border: 2px solid gray;
+    color: #000;
+    text-align: center;
+}
+/* small tablet styles */
+
+/* large tablets and laptops */
+
+/* desktop styles */
+
