@@ -50,7 +50,11 @@
     </div>
     <div class="additional-information">
       <p>. Item will be delivered in one week if it is not in stock</p>
-      <p>. Share with us for the price</p>
+      <p>. Share with us for the price
+        <button id="shareButton" class="share-button">
+          <img src="img/share-icon.png" alt="Share" class="share-icon"> <!-- Use a share icon image or an icon library -->
+        </button>
+      </p>
     </div>
   </div>
 
@@ -66,6 +70,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get("id");
+      console.log("Product ID from URL:", productId);
   
       if (!productId) {
         console.error("No product ID provided");
@@ -76,7 +81,8 @@
       fetch("products.json")
         .then(response => response.json())
         .then(data => {
-          const product = findProductById(data.categories, parseInt(productId));
+          console.log("Fetched data:", data); 
+          const product = findProductById(data.categories, productId);
           if (!product) {
             console.error("Product not found");
             return;
@@ -87,12 +93,16 @@
   
       // Find a product by ID across all categories
       function findProductById(categories, id) {
-        for (const category of categories) {
-          const product = category.products.find(item => item.id === id);
-          if (product) return product;
-        }
-        return null;
-      }
+  for (const category of categories) {
+    const product = category.products.find(item => item.id === id);
+    if (product) {
+      console.log("Found product:", product); // Add this line
+      return product;
+    }
+  }
+  console.error("No product matches the given ID:", id); // Add this line
+  return null;
+}
   
       // Display the product details on the detail page
       function displayProductDetails(product) {
@@ -111,6 +121,39 @@
         });
       }
     });
+
+    // Share Function Code
+    document.getElementById("shareButton").addEventListener("click", function () {
+    const url = window.location.href;
+
+    // Check if Web Share API is supported
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        url: url
+      }).then(() => {
+        console.log("Thanks for sharing!");
+      }).catch((error) => {
+        console.error("Error sharing:", error);
+      });
+    } else {
+      // Fallback: Copy the URL to the clipboard
+      copyToClipboard(url);
+      alert("URL copied to clipboard! You can share it manually.");
+    }
+  });
+
+  // Function to copy text to the clipboard
+  function copyToClipboard(text) {
+    const tempInput = document.createElement("input");
+    tempInput.style.position = "absolute";
+    tempInput.style.left = "-9999px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  }
   </script>
   
 </body>

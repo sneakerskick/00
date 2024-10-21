@@ -186,10 +186,10 @@ nav ul li:nth-child(2):hover .categories-submenu ul li{
 }
 a.see-more{
     text-align: center;
-    margin: 15px auto;
-    display: block;
     font-size: 1.1em;
     color: #000;
+    display: block;
+    margin: 15px auto;
 }
 footer{
     color: #fff;

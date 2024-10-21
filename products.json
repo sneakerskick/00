@@ -1,24 +1,204 @@
 {
     "categories": [
       {
-        "name": "Nike",
+        "name": "flashSale",
         "products": [
           {
-            "id": 1,
+            "id": "aj4",
+            "image": "img/aj4.jpg",
+            "productText": {
+              "title": "Nike Air Jordan 4",
+              "description": "High quality and stylish sneaker",
+              "size": "Only 42 contact us for other size"
+            },
+            "qcImages": [
+              "img/flashSale/aj4qc1.jpg",
+              "img/flashSale/aj4qc2.jpg",
+              "img/flashSale/aj4qc3.jpg",
+              "img/flashSale/aj4qc4.jpg",
+              "img/flashSale/aj4qc5.jpg",
+              "img/flashSale/aj4qc6.jpg",
+              "img/flashSale/aj4qc7.jpg",
+              "img/flashSale/aj4qc8.jpg"
+            ]
+          },
+          {
+            "id": "aj1",
             "image": "img/aj1.jpg",
+            "productText": {
+              "title": "Nike Air Jordan 1",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: Only 42 contact us for other size"
+            },
+            "qcImages": [
+              "img/flashSale/aj1qc1.jpg",
+              "img/flashSale/aj1qc2.jpg",
+              "img/flashSale/aj1qc3.jpg",
+              "img/flashSale/aj1qc4.jpg",
+              "img/flashSale/aj1qc5.jpg",
+              "img/flashSale/aj1qc6.jpg",
+              "img/flashSale/aj1qc7.jpg",
+              "img/flashSale/aj1qc8.jpg",
+              "img/flashSale/aj1qc9.jpg",
+              "img/flashSale/aj1qc10.jpg",
+              "img/flashSale/aj1qc11.jpg",
+              "img/flashSale/aj1qc12.jpg",
+              "img/flashSale/aj1qc13.jpg",
+              "img/flashSale/aj1qc14.jpg",
+              "img/flashSale/aj1qc15.jpg"
+            ]
+          },
+          {
+            "id": "forum",
+            "image": "img/forum.jpg",
+            "productText": {
+              "title": "Adidas Forum 84",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: 36, 37, 38, 39, ... 45."
+            },
+            "qcImages": [
+              "img/flashSale/forumqc1.jpg",
+              "img/flashSale/forumqc2.jpg",
+              "img/flashSale/forumqc3.jpg",
+              "img/flashSale/forumqc4.jpg",
+              "img/flashSale/forumqc5.jpg",
+              "img/flashSale/forumqc6.jpg",
+              "img/flashSale/forumqc7.jpg",
+              "img/flashSale/forumqc8.jpg",
+              "img/flashSale/forumqc9.jpg",
+              "img/flashSale/forumqc10.jpg",
+              "img/flashSale/forumqc11.jpg",
+              "img/flashSale/forumqc12.jpg",
+              "img/flashSale/forumqc13.jpg"
+            ]
+          },
+          {
+            "id": "samba",
+            "image": "img/samba.jpeg",
+            "productText": {
+              "title": "Adidas Samba",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: 36, 37, 38, 39, ... 45."
+            },
+            "qcImages": [
+              "img/flashSale/sambaQc1.jpeg",
+              "img/flashSale/sambaQc2.jpeg",
+              "img/flashSale/sambaQc3.jpeg",
+              "img/flashSale/sambaQc4.jpeg",
+              "img/flashSale/sambaQc5.jpg",
+              "img/flashSale/sambaQc6.jpg",
+              "img/flashSale/sambaQc7.jpg",
+              "img/flashSale/sambaQc8.jpg"
+            ]
+          },
+          {
+            "id": "af1",
+            "image": "img/af1.jpg",
             "productText": {
               "title": "Nike Air Jordan 1",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/aj1.jpg",
-              "img/af1.jpg",
-              "img/aj4.jpg"
+              "img/flashSale/af1qc1.jpg",
+              "img/flashSale/af1qc2.jpg",
+              "img/flashSale/af1qc3.jpg",
+              "img/flashSale/af1qc4.jpg",
+              "img/flashSale/af1qc5.jpg",
+              "img/flashSale/af1qc6.jpg",
+              "img/flashSale/af1qc7.jpg",
+              "img/flashSale/af1qc9.jpg"
             ]
           },
           {
-            "id": 2,
+            "id": "dunkLow",
+            "image": "img/dunklow.jpg",
+            "src": "hi",
+            "productText": {
+              "title": "Nike Dunk",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: 36, 37, 38, 39, ... 45."
+            },
+            "qcImages": [
+              "img/flashSale/dunkqc.jpg"
+            ]
+          },
+          {
+            "id": "aj4bjt",
+            "image": "img/aj1bjt.jpg",
+            "productText": {
+              "title": "Nike Air Jordan 4 Budget",
+              "description": "High quality and stylish sneaker",
+              "size": "shoe size: 36, 37, 38, 39, ... 45."
+            },
+            "qcImages": [
+              "img/aj1bjt.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NikeDunk",
+        "products": [
+          {
+            "id": "154267011|1",
+            "scr": "88vip/New G Batch/ C269【New G】N1k D*NK LOW 313170 342 | 19 / 154267011",
+            "image": "img/NikeDunk/20241020_154267011.jpg",
+            "productText": {
+              "title": "Nike Dunk Low",
+              "description": "High quality and stylish sneaker",
+              "size": "Size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
+            },
+            "qcImages": [
+              "img/NikeDunk/20241020_154267011_qc1.jpg",
+              "img/NikeDunk/20241020_154267011_qc2.jpg",
+              "img/NikeDunk/20241020_154267011_qc3.jpg",
+              "img/NikeDunk/20241020_154267011_qc4.jpg",
+              "img/NikeDunk/20241020_154267011_qc5.jpg",
+              "img/NikeDunk/20241020_154267011_qc6.jpg",
+              "img/NikeDunk/20241020_154267011_qc7.jpg",
+              "img/NikeDunk/20241020_154267011_qc8.jpg",
+              "img/NikeDunk/20241020_154267011_qc9.jpg",
+              "img/NikeDunk/20241020_154267011_qc10.jpg",
+              "img/NikeDunk/20241020_154267011_qc11.jpg",
+              "img/NikeDunk/20241020_154267011_qc12.jpg",
+              "img/NikeDunk/20241020_154267011_qc13.jpg",
+              "img/NikeDunk/20241020_154267011_qc14.jpg",
+              "img/NikeDunk/20241020_154267011_qc15.jpg"
+            ]
+          },
+          {
+            "id": "149494395|2",
+            "scr": "77sneakers / Dunk / Dunk CLOT x Nike Dunk Low 20. FN0317-121 | 18 / 149494395",
+            "image": "img/NikeDunk/20241020_149494395.jpeg",
+            "productText": {
+              "title": "Nike Dunk Low",
+              "description": "Comfortable and durable sneaker",
+              "size": "shoe size: 36 - 47.5."
+            },
+            "qcImages": [
+              "img/NikeDunk/20241020_149494395_qc1.jpg",
+              "img/NikeDunk/20241020_149494395_qc2.jpg",
+              "img/NikeDunk/20241020_149494395_qc3.jpg",
+              "img/NikeDunk/20241020_149494395_qc4.jpg",
+              "img/NikeDunk/20241020_149494395_qc5.jpg",
+              "img/NikeDunk/20241020_149494395_qc6.jpg",
+              "img/NikeDunk/20241020_149494395_qc7.jpg",
+              "img/NikeDunk/20241020_149494395_qc8.jpg",
+              "img/NikeDunk/20241020_149494395_qc9.jpg",
+              "img/NikeDunk/20241020_149494395_qc10.jpg",
+              "img/NikeDunk/20241020_149494395_qc11.jpg",
+              "img/NikeDunk/20241020_149494395_qc12.jpg",
+              "img/NikeDunk/20241020_149494395_qc13.jpg",
+              "img/NikeDunk/20241020_149494395_qc14.jpg",
+              "img/NikeDunk/20241020_149494395_qc15.jpg",
+              "img/NikeDunk/20241020_149494395_qc16.jpg",
+              "img/NikeDunk/20241020_149494395_qc17.jpg",
+              "img/NikeDunk/20241020_149494395_qc18.jpg"
+            ]
+          },
+          {
+            "id": "2",
             "image": "img/af1.jpg",
             "productText": {
               "title": "Nike Air Force 1",
@@ -34,7 +214,7 @@
         ]
       },
       {
-        "name": "Adidas",
+        "name": "AirJordan4",
         "products": [
           {
             "id": 3,

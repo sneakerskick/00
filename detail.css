@@ -20,7 +20,7 @@ img{
     grid-template: 
     "picture title"
     "info info"
-    / 30% 1fr;
+    / 40% 1fr;
     align-items: center;
     column-gap: 20px;
 }
@@ -40,4 +40,19 @@ img{
 }
 .qc-img-container img{
     margin: 20px 5px;
+}
+/* Style for the share button */
+.share-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px; /* Space between text and icon */
+}
+
+  /* Style for the share icon */
+.share-icon {
+    width: 16px;
+    height: 16px;
 }
