@@ -12,7 +12,7 @@
     <header>
         <div class="top-bar">
             <p>Only Replicas</p>
-            <p>Contact Us for price +251</p>
+            <p>Contact Us for price +251-92 976 2529</p>
           </div>
           <nav>
             <ul>
@@ -88,6 +88,9 @@
             return;
           }
           displayProductDetails(product);
+
+          // Update the navigation links
+    updateNavigationLinks(product, data.categories);
         })
         .catch(error => console.error("Error fetching product data:", error));
   
@@ -154,6 +157,29 @@
     document.execCommand("copy");
     document.body.removeChild(tempInput);
   }
+
+
+
+// Function to update the navigation links
+function updateNavigationLinks(product, categories) {
+  // Update the 'Home' link
+  const homeLink = document.querySelector(".current-product a:nth-child(1)");
+  homeLink.href = "index.html"; // Set to your home page URL
+
+  // Update the 'Current Category' link
+  const categoryLink = document.querySelector(".current-product a:nth-child(2)");
+  const category = categories.find(cat => cat.products.some(prod => prod.id === product.id));
+  
+  if (category) {
+    categoryLink.href = `categories.html?category=${category.name}`; // Link to the category page
+    categoryLink.textContent = category.name; // Set the category name as the link text
+  }
+
+  // Update the 'Current Product' link
+  const productLink = document.querySelector(".current-product a:nth-child(3)");
+  productLink.href = `detail.html?id=${product.id}`; // Link to the current product
+  productLink.textContent = product.productText.title; // Set the product title as the link text
+}
   </script>
   
 </body>

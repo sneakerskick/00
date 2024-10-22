@@ -11,7 +11,7 @@
     <header>
         <div class="top-bar">
             <p>Only Replicas</p>
-            <p>Contact Us for price +251</p>
+            <p>Contact Us for price +251-92 976 2529</p>
           </div>
           <nav>
             <ul>
@@ -68,11 +68,17 @@
         .then(response => response.json())
         .then(data => {
           const category = data.categories.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
+
+          // Get the category name from the URL query parameter
+    // const categoryName = new URLSearchParams(window.location.search).get("category");
           if (!category) {
             console.error("Category not found");
             return;
           }
           displayCategoryProducts(category);
+
+           // Update the navigation links
+    updateCategoryNavigationLinks(category);
         })
         .catch(error => console.error("Error fetching product data:", error));
   
@@ -91,6 +97,18 @@
           productGrid.appendChild(card);
         });
       }
+
+      // Function to update the navigation links
+function updateCategoryNavigationLinks(category) {
+  // Update the 'Home' link
+  const homeLink = document.querySelector(".current-category a:nth-child(1)");
+  homeLink.href = "index.html"; // Set to your home page URL
+
+  // Update the 'Current Category' link
+  const categoryLink = document.querySelector(".current-category a:nth-child(2)");
+  categoryLink.href = `categories.html?category=${category.name}`; // Link to the current category page
+  categoryLink.textContent = category.name; // Set the category name as the link text
+}
     });
   </script>
   
