@@ -211,6 +211,7 @@ footer p{
 }
 /* Contact Us Page */
 #contact-section{
+    position: relative;
     width: fit-content;
     padding: 2em;
     margin: 8em auto;
@@ -219,9 +220,49 @@ footer p{
     color: #000;
     text-align: center;
 }
+/* small mobile devices */
+@media (max-width: 400px){
+    .top-bar p{
+        font-size: 14px;
+    }
+    .flash-sale-banner-txt h1{
+        font-size: 1.7em;
+    }
+    .flash-sale-banner{
+        padding: 10px;
+        gap: 10px;
+    }
+}
+/* extra small mobile devices */
+@media (max-width: 351px){
+    .top-bar p{
+        font-size: 12px;
+    }
+    .flash-sale-banner-txt h1{
+        font-size: 1.5em;
+    }
+    .flash-sale-banner-txt p{
+        font-size: 12px;
+    }
+    .flash-sale-banner-txt a{
+        font-size: 12px;
+    }
+    .category-products{
+        padding: 10px;
+    }
+    .category-products .product-card{
+        flex: 1 0 140px;
+    }
+}
 /* small tablet styles */
-
+@media (min-width: 620px) {
+    
+}
 /* large tablets and laptops */
-
+@media (min-width: 960px) {
+    
+}
 /* desktop styles */
-
+@media (min-width: 1200px) {
+    
+}
