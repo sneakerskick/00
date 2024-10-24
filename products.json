@@ -198,17 +198,57 @@
             ]
           },
           {
-            "id": "2",
-            "image": "img/af1.jpg",
+            "id": "155457975|3",
+            "scr": "88vip / VT Batch / C168【VT】N1k DUNK LOW DD1391 100 | 18 / 155457975",
+            "image": "img/NikeDunk/202041020_155457975.jpg",
             "productText": {
-              "title": "Nike Air Force 1",
+              "title": "Nike Dunk Low",
               "description": "Comfortable and durable sneaker",
-              "size": "shoe size: 40, 41, 42, 43, ... 48."
+              "size": "shoe size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
             },
             "qcImages": [
-              "img/af1.jpg",
-              "img/aj1.jpg",
-              "img/dunklow.jpg"
+              "img/NikeDunk/202041020_155457975_qc1.jpg",
+              "img/NikeDunk/202041020_155457975_qc2.jpg",
+              "img/NikeDunk/202041020_155457975_qc3.jpg",
+              "img/NikeDunk/202041020_155457975_qc4.jpg",
+              "img/NikeDunk/202041020_155457975_qc5.jpg",
+              "img/NikeDunk/202041020_155457975_qc6.jpg",
+              "img/NikeDunk/202041020_155457975_qc7.jpg",
+              "img/NikeDunk/202041020_155457975_qc8.jpg",
+              "img/NikeDunk/202041020_155457975_qc9.jpg",
+              "img/NikeDunk/202041020_155457975_qc10.jpg",
+              "img/NikeDunk/202041020_155457975_qc11.jpg",
+              "img/NikeDunk/202041020_155457975_qc12.jpg",
+              "img/NikeDunk/202041020_155457975_qc13.jpg",
+              "img/NikeDunk/202041020_155457975_qc14.jpg",
+              "img/NikeDunk/202041020_155457975_qc15.jpg",
+              "img/NikeDunk/202041020_155457975_qc16.jpg"
+            ]
+          },
+          {
+            "id": "155991471|4",
+            "scr": "YEfactory / Dunk PK 2.0 Batch / P300【PK2.0】 N1KE DUNK LOW CD2563 101 | 17 / 155991471",
+            "image": "img/NikeDunk/202041024_155991471.jpg",
+            "productText": {
+              "title": "Nike Dunk Low",
+              "description": "Comfortable and durable sneaker",
+              "size": "shoe size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
+            },
+            "qcImages": [
+              "img/NikeDunk/202041024_155991471_qc1.jpg",
+              "img/NikeDunk/202041024_155991471_qc2.jpg",
+              "img/NikeDunk/202041024_155991471_qc3.jpg",
+              "img/NikeDunk/202041024_155991471_qc4.jpg",
+              "img/NikeDunk/202041024_155991471_qc5.jpg",
+              "img/NikeDunk/202041024_155991471_qc6.jpg",
+              "img/NikeDunk/202041024_155991471_qc7.jpg",
+              "img/NikeDunk/202041024_155991471_qc8.jpg",
+              "img/NikeDunk/202041024_155991471_qc9.jpg",
+              "img/NikeDunk/202041024_155991471_qc10.jpg",
+              "img/NikeDunk/202041024_155991471_qc11.jpg",
+              "img/NikeDunk/202041024_155991471_qc12.jpg",
+              "img/NikeDunk/202041024_155991471_qc13.jpg",
+              "img/NikeDunk/202041024_155991471_qc14.jpg"
             ]
           }
         ]
@@ -217,17 +257,88 @@
         "name": "AirJordan4",
         "products": [
           {
-            "id": 3,
-            "image": "img/samba.jpeg",
+            "id": "167097561|5",
+            "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 DH6927-017 | 10 / 167097561",
+            "image": "img/AirJordan4/20241024_167097561.jpg",
             "productText": {
-              "title": "Adidas Samba",
+              "title": "Air Jordan 4",
               "description": "Classic and versatile sneaker",
-              "size": "shoe size: 38, 39, 40, 41, ... 46."
+              "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
             },
             "qcImages": [
-              "img/samba.jpeg",
-              "img/forum.jpg",
-              "img/dunklow.jpg"
+              "img/AirJordan4/20241024_167097561_qc1.jpg",
+              "img/AirJordan4/20241024_167097561_qc2.jpg",
+              "img/AirJordan4/20241024_167097561_qc3.jpg",
+              "img/AirJordan4/20241024_167097561_qc4.jpg",
+              "img/AirJordan4/20241024_167097561_qc5.jpg",
+              "img/AirJordan4/20241024_167097561_qc6.jpg",
+              "img/AirJordan4/20241024_167097561_qc7.jpg",
+              "img/AirJordan4/20241024_167097561_qc8.jpg"
+            ]
+          },
+          {
+            "id": "167097383|6",
+            "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 RetroMidnight Navy” DH6927-140 | 10 / 167097383",
+            "image": "img/AirJordan4/20241024_167097383.jpg",
+            "productText": {
+              "title": "Air Jordan 4",
+              "description": "Classic and versatile sneaker",
+              "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
+            },
+            "qcImages": [
+              "img/AirJordan4/20241024_167097383.jpg",
+              "img/AirJordan4/20241024_167097383_qc1.jpg",
+              "img/AirJordan4/20241024_167097383_qc2.jpg",
+              "img/AirJordan4/20241024_167097383_qc3.jpg",
+              "img/AirJordan4/20241024_167097383_qc4.jpg",
+              "img/AirJordan4/20241024_167097383_qc5.jpg",
+              "img/AirJordan4/20241024_167097383_qc6.jpg",
+              "img/AirJordan4/20241024_167097383_qc7.jpg",
+              "img/AirJordan4/20241024_167097383_qc8.jpg"
+            ]
+          },
+          {
+            "id": "167097219|7",
+            "src": "cool-kicks / KX-KZ Batch / C300 KX/KZ Batch Travis Scott Cactus Jack x Jordan Air Jordan 4 308497-406 | 10 / 167097219",
+            "image": "img/AirJordan4/20241024_167097219.jpg",
+            "productText": {
+              "title": "Air Jordan 4",
+              "description": "Classic and versatile sneaker",
+              "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
+            },
+            "qcImages": [
+              "img/AirJordan4/20241024_167097219.jpg",
+              "img/AirJordan4/20241024_167097219_qc1.jpg",
+              "img/AirJordan4/20241024_167097219_qc2.jpg",
+              "img/AirJordan4/20241024_167097219_qc3.jpg",
+              "img/AirJordan4/20241024_167097219_qc4.jpg",
+              "img/AirJordan4/20241024_167097219_qc5.jpg",
+              "img/AirJordan4/20241024_167097219_qc6.jpg",
+              "img/AirJordan4/20241024_167097219_qc7.jpg",
+              "img/AirJordan4/20241024_167097219_qc8.jpg"
+              
+            ]
+          },
+          {
+            "id": "167097121|8",
+            "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 retro infrared DH6927-061 | 10 / 167097121",
+            "image": "img/AirJordan4/20241024_167097121.jpg",
+            "productText": {
+              "title": "Air Jordan 4",
+              "description": "Classic and versatile sneaker",
+              "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
+            },
+            "qcImages": [
+              "img/AirJordan4/20241024_167097121.jpg",
+              "img/AirJordan4/20241024_167097121_qc1.jpg",
+              "img/AirJordan4/20241024_167097121_qc2.jpg",
+              "img/AirJordan4/20241024_167097121_qc3.jpg",
+              "img/AirJordan4/20241024_167097121_qc4.jpg",
+              "img/AirJordan4/20241024_167097121_qc5.jpg",
+              "img/AirJordan4/20241024_167097121_qc6.jpg",
+              "img/AirJordan4/20241024_167097121_qc7.jpg",
+              "img/AirJordan4/20241024_167097121_qc8.jpg"
+              
             ]
           }
         ]
