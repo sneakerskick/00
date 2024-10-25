@@ -29,4 +29,39 @@
     slider.scrollLeft = scrollLeft - walk;
   });
 
-// fetch details for the detail.html page
+// Lazy Loading Function
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll("img.lazy");
+
+    if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazy");
+                    observer.unobserve(image);
+                }
+            });
+        });
+
+        lazyImages.forEach(image => {
+            imageObserver.observe(image);
+        });
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        const lazyLoad = () => {
+            lazyImages.forEach(image => {
+                if (image.getBoundingClientRect().top < window.innerHeight && image.getBoundingClientRect().bottom > 0) {
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazy");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", lazyLoad);
+        window.addEventListener("resize", lazyLoad);
+        window.addEventListener("orientationchange", lazyLoad);
+    }
+});

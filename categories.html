@@ -6,6 +6,7 @@
     <title>Category</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="category.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -91,24 +92,64 @@
           card.classList.add("card");
           card.innerHTML = `
             <a href="detail.html?id=${product.id}">
-              <img src="${product.image}" alt="${product.productText.title}">
+              <img class="lazy" data-src="${product.image}" alt="${product.productText.title}" src="">
             </a>
           `;
           productGrid.appendChild(card);
         });
+        // Call the lazy loading function for the newly added images
+        lazyLoadImages();
       }
 
       // Function to update the navigation links
-function updateCategoryNavigationLinks(category) {
-  // Update the 'Home' link
-  const homeLink = document.querySelector(".current-category a:nth-child(1)");
-  homeLink.href = "index.html"; // Set to your home page URL
+        function updateCategoryNavigationLinks(category) {
+          // Update the 'Home' link
+          const homeLink = document.querySelector(".current-category a:nth-child(1)");
+          homeLink.href = "index.html"; // Set to your home page URL
 
-  // Update the 'Current Category' link
-  const categoryLink = document.querySelector(".current-category a:nth-child(2)");
-  categoryLink.href = `categories.html?category=${category.name}`; // Link to the current category page
-  categoryLink.textContent = category.name; // Set the category name as the link text
+          // Update the 'Current Category' link
+          const categoryLink = document.querySelector(".current-category a:nth-child(2)");
+          categoryLink.href = `categories.html?category=${category.name}`; // Link to the current category page
+          categoryLink.textContent = category.name; // Set the category name as the link text
+        }
+
+      // Lazy Loading Function
+      function lazyLoadImages() {
+    const lazyImages = document.querySelectorAll("img.lazy");
+
+    if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazy");
+                    observer.unobserve(image);
+                }
+            });
+        });
+
+        lazyImages.forEach(image => {
+            imageObserver.observe(image);
+        });
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        const lazyLoad = () => {
+            lazyImages.forEach(image => {
+                if (image.getBoundingClientRect().top < window.innerHeight && image.getBoundingClientRect().bottom > 0) {
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazy");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", lazyLoad);
+        window.addEventListener("resize", lazyLoad);
+        window.addEventListener("orientationchange", lazyLoad);
+    }
 }
+
+
     });
   </script>
   
