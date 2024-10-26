@@ -65,3 +65,105 @@
         window.addEventListener("orientationchange", lazyLoad);
     }
 });
+
+
+// cache data
+
+const CACHE_DB_NAME = "ProductCacheDB";
+const CACHE_STORE_NAME = "products";
+const CACHE_EXPIRATION_MS = 60 * 1000; // 24 hours
+
+// Open the IndexedDB
+function openDatabase() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(CACHE_DB_NAME, 1);
+        request.onupgradeneeded = function (event) {
+            const db = event.target.result;
+            if (!db.objectStoreNames.contains(CACHE_STORE_NAME)) {
+                db.createObjectStore(CACHE_STORE_NAME, { keyPath: "id" });
+            }
+        };
+        request.onsuccess = function (event) {
+            resolve(event.target.result);
+        };
+        request.onerror = function (event) {
+            reject("Failed to open database");
+        };
+    });
+}
+
+// Save data to IndexedDB
+function saveDataToCache(db, data) {
+    const transaction = db.transaction(CACHE_STORE_NAME, "readwrite");
+    const store = transaction.objectStore(CACHE_STORE_NAME);
+    data.categories.forEach(category => {
+        category.products.forEach(product => {
+            product.cacheTimestamp = Date.now(); // Add a timestamp for expiration
+            store.put(product);
+        });
+    });
+}
+
+// Load data from IndexedDB
+function loadDataFromCache(db) {
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(CACHE_STORE_NAME, "readonly");
+        const store = transaction.objectStore(CACHE_STORE_NAME);
+        const request = store.getAll();
+        request.onsuccess = function (event) {
+            resolve(event.target.result);
+        };
+        request.onerror = function () {
+            reject("Failed to load data from cache");
+        };
+    });
+}
+
+// Check if data is expired
+function isCacheExpired(cachedData) {
+    if (!cachedData || cachedData.length === 0) {
+        return true; // No data in cache
+    }
+    // Check the timestamp of the first product (assuming all products are updated together)
+    const currentTime = Date.now();
+    return currentTime - cachedData[0].cacheTimestamp > CACHE_EXPIRATION_MS;
+}
+
+// Fetch data from the JSON file and update the cache
+async function fetchAndCacheData(jsonUrl) {
+    try {
+        const response = await fetch(jsonUrl);
+        const data = await response.json();
+        const db = await openDatabase();
+        saveDataToCache(db, data);
+        return data;
+    } catch (error) {
+        console.error("Error fetching JSON data:", error);
+        throw error;
+    }
+}
+
+// Main function to get the data, either from cache or by fetching
+async function getCachedData(jsonUrl) {
+    const db = await openDatabase();
+    const cachedData = await loadDataFromCache(db);
+
+    if (isCacheExpired(cachedData)) {
+        console.log("Cache expired or not available, fetching new data...");
+        return fetchAndCacheData(jsonUrl);
+    } else {
+        console.log("Using cached data");
+        return cachedData;
+    }
+}
+
+// Usage example
+const jsonFilePath = "products.json";
+getCachedData(jsonFilePath)
+    .then(data => {
+        console.log("Product Data:", data);
+        // Process the data as needed
+    })
+    .catch(error => {
+        console.error("Failed to load product data:", error);
+    });
