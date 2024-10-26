@@ -5,114 +5,114 @@
         "products": [
           {
             "id": "aj4",
-            "image": "img/aj4.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/aj4.webp",
             "productText": {
               "title": "Nike Air Jordan 4",
               "description": "High quality and stylish sneaker",
               "size": "Only 42 contact us for other size"
             },
             "qcImages": [
-              "img/flashSale/aj4qc1.jpg",
-              "img/flashSale/aj4qc2.jpg",
-              "img/flashSale/aj4qc3.jpg",
-              "img/flashSale/aj4qc4.jpg",
-              "img/flashSale/aj4qc5.jpg",
-              "img/flashSale/aj4qc6.jpg",
-              "img/flashSale/aj4qc7.jpg",
-              "img/flashSale/aj4qc8.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc1.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc2.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc3.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc4.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc5.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc6.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc7.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj4qc8.webp"
             ]
           },
           {
             "id": "aj1",
-            "image": "img/aj1.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/aj1.webp",
             "productText": {
               "title": "Nike Air Jordan 1",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: Only 42 contact us for other size"
             },
             "qcImages": [
-              "img/flashSale/aj1qc1.jpg",
-              "img/flashSale/aj1qc2.jpg",
-              "img/flashSale/aj1qc3.jpg",
-              "img/flashSale/aj1qc4.jpg",
-              "img/flashSale/aj1qc5.jpg",
-              "img/flashSale/aj1qc6.jpg",
-              "img/flashSale/aj1qc7.jpg",
-              "img/flashSale/aj1qc8.jpg",
-              "img/flashSale/aj1qc9.jpg",
-              "img/flashSale/aj1qc10.jpg",
-              "img/flashSale/aj1qc11.jpg",
-              "img/flashSale/aj1qc12.jpg",
-              "img/flashSale/aj1qc13.jpg",
-              "img/flashSale/aj1qc14.jpg",
-              "img/flashSale/aj1qc15.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc1.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc2.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc3.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc4.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc5.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc6.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc7.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc8.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc9.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc10.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc11.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc12.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc13.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc14.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/aj1qc15.webp"
             ]
           },
           {
             "id": "forum",
-            "image": "img/forum.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/forum.webp",
             "productText": {
               "title": "Adidas Forum 84",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/flashSale/forumqc1.jpg",
-              "img/flashSale/forumqc2.jpg",
-              "img/flashSale/forumqc3.jpg",
-              "img/flashSale/forumqc4.jpg",
-              "img/flashSale/forumqc5.jpg",
-              "img/flashSale/forumqc6.jpg",
-              "img/flashSale/forumqc7.jpg",
-              "img/flashSale/forumqc8.jpg",
-              "img/flashSale/forumqc9.jpg",
-              "img/flashSale/forumqc10.jpg",
-              "img/flashSale/forumqc11.jpg",
-              "img/flashSale/forumqc12.jpg",
-              "img/flashSale/forumqc13.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc1.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc2.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc3.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc4.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc5.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc6.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc7.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc8.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc9.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc10.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc11.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc12.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/forumqc13.webp"
             ]
           },
           {
             "id": "samba",
-            "image": "img/samba.jpeg",
+            "image": "https://ik.imagekit.io/imgfolder/samba.webp",
             "productText": {
               "title": "Adidas Samba",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/flashSale/sambaQc1.jpeg",
-              "img/flashSale/sambaQc2.jpeg",
-              "img/flashSale/sambaQc3.jpeg",
-              "img/flashSale/sambaQc4.jpeg",
-              "img/flashSale/sambaQc5.jpg",
-              "img/flashSale/sambaQc6.jpg",
-              "img/flashSale/sambaQc7.jpg",
-              "img/flashSale/sambaQc8.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc1.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc2.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc3.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc4.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc5.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc6.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc7.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/sambaQc8.webp"
             ]
           },
           {
             "id": "af1",
-            "image": "img/af1.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/af1.webp",
             "productText": {
               "title": "Nike Air Jordan 1",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/flashSale/af1qc1.jpg",
-              "img/flashSale/af1qc2.jpg",
-              "img/flashSale/af1qc3.jpg",
-              "img/flashSale/af1qc4.jpg",
-              "img/flashSale/af1qc5.jpg",
-              "img/flashSale/af1qc6.jpg",
-              "img/flashSale/af1qc7.jpg",
-              "img/flashSale/af1qc9.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc1.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc2.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc3.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc4.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc5.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc6.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc7.webp",
+              "https://ik.imagekit.io/imgfolder/flashSale/af1qc9.webp"
             ]
           },
           {
             "id": "dunkLow",
-            "image": "img/dunklow.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/dunklow.webp",
             "src": "hi",
             "productText": {
               "title": "Nike Dunk",
@@ -120,19 +120,19 @@
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/flashSale/dunkqc.jpg"
+              "https://ik.imagekit.io/imgfolder/flashSale/dunkqc.webp"
             ]
           },
           {
             "id": "aj4bjt",
-            "image": "img/aj1bjt.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/aj1bjt.webp",
             "productText": {
               "title": "Nike Air Jordan 4 Budget",
               "description": "High quality and stylish sneaker",
               "size": "shoe size: 36, 37, 38, 39, ... 45."
             },
             "qcImages": [
-              "img/aj1bjt.jpg"
+              "https://ik.imagekit.io/imgfolder/aj1bjt.webp"
             ]
           }
         ]
@@ -143,112 +143,112 @@
           {
             "id": "154267011|1",
             "scr": "88vip/New G Batch/ C269【New G】N1k D*NK LOW 313170 342 | 19 / 154267011",
-            "image": "img/NikeDunk/20241020_154267011.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011.webp",
             "productText": {
               "title": "Nike Dunk Low",
               "description": "High quality and stylish sneaker",
               "size": "Size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
             },
             "qcImages": [
-              "img/NikeDunk/20241020_154267011_qc1.jpg",
-              "img/NikeDunk/20241020_154267011_qc2.jpg",
-              "img/NikeDunk/20241020_154267011_qc3.jpg",
-              "img/NikeDunk/20241020_154267011_qc4.jpg",
-              "img/NikeDunk/20241020_154267011_qc5.jpg",
-              "img/NikeDunk/20241020_154267011_qc6.jpg",
-              "img/NikeDunk/20241020_154267011_qc7.jpg",
-              "img/NikeDunk/20241020_154267011_qc8.jpg",
-              "img/NikeDunk/20241020_154267011_qc9.jpg",
-              "img/NikeDunk/20241020_154267011_qc10.jpg",
-              "img/NikeDunk/20241020_154267011_qc11.jpg",
-              "img/NikeDunk/20241020_154267011_qc12.jpg",
-              "img/NikeDunk/20241020_154267011_qc13.jpg",
-              "img/NikeDunk/20241020_154267011_qc14.jpg",
-              "img/NikeDunk/20241020_154267011_qc15.jpg"
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc8.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc9.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc10.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc11.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc12.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc13.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc14.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_154267011_qc15.webp"
             ]
           },
           {
             "id": "149494395|2",
             "scr": "77sneakers / Dunk / Dunk CLOT x Nike Dunk Low 20. FN0317-121 | 18 / 149494395",
-            "image": "img/NikeDunk/20241020_149494395.jpeg",
+            "image": "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395.webp",
             "productText": {
               "title": "Nike Dunk Low",
               "description": "Comfortable and durable sneaker",
               "size": "shoe size: 36 - 47.5."
             },
             "qcImages": [
-              "img/NikeDunk/20241020_149494395_qc1.jpg",
-              "img/NikeDunk/20241020_149494395_qc2.jpg",
-              "img/NikeDunk/20241020_149494395_qc3.jpg",
-              "img/NikeDunk/20241020_149494395_qc4.jpg",
-              "img/NikeDunk/20241020_149494395_qc5.jpg",
-              "img/NikeDunk/20241020_149494395_qc6.jpg",
-              "img/NikeDunk/20241020_149494395_qc7.jpg",
-              "img/NikeDunk/20241020_149494395_qc8.jpg",
-              "img/NikeDunk/20241020_149494395_qc9.jpg",
-              "img/NikeDunk/20241020_149494395_qc10.jpg",
-              "img/NikeDunk/20241020_149494395_qc11.jpg",
-              "img/NikeDunk/20241020_149494395_qc12.jpg",
-              "img/NikeDunk/20241020_149494395_qc13.jpg",
-              "img/NikeDunk/20241020_149494395_qc14.jpg",
-              "img/NikeDunk/20241020_149494395_qc15.jpg",
-              "img/NikeDunk/20241020_149494395_qc16.jpg",
-              "img/NikeDunk/20241020_149494395_qc17.jpg",
-              "img/NikeDunk/20241020_149494395_qc18.jpg"
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc8.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc9.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc10.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc11.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc12.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc13.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc14.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc15.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc16.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc17.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/20241020_149494395_qc18.webp"
             ]
           },
           {
             "id": "155457975|3",
             "scr": "88vip / VT Batch / C168【VT】N1k DUNK LOW DD1391 100 | 18 / 155457975",
-            "image": "img/NikeDunk/202041020_155457975.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975.webp",
             "productText": {
               "title": "Nike Dunk Low",
               "description": "Comfortable and durable sneaker",
               "size": "shoe size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
             },
             "qcImages": [
-              "img/NikeDunk/202041020_155457975_qc1.jpg",
-              "img/NikeDunk/202041020_155457975_qc2.jpg",
-              "img/NikeDunk/202041020_155457975_qc3.jpg",
-              "img/NikeDunk/202041020_155457975_qc4.jpg",
-              "img/NikeDunk/202041020_155457975_qc5.jpg",
-              "img/NikeDunk/202041020_155457975_qc6.jpg",
-              "img/NikeDunk/202041020_155457975_qc7.jpg",
-              "img/NikeDunk/202041020_155457975_qc8.jpg",
-              "img/NikeDunk/202041020_155457975_qc9.jpg",
-              "img/NikeDunk/202041020_155457975_qc10.jpg",
-              "img/NikeDunk/202041020_155457975_qc11.jpg",
-              "img/NikeDunk/202041020_155457975_qc12.jpg",
-              "img/NikeDunk/202041020_155457975_qc13.jpg",
-              "img/NikeDunk/202041020_155457975_qc14.jpg",
-              "img/NikeDunk/202041020_155457975_qc15.jpg",
-              "img/NikeDunk/202041020_155457975_qc16.jpg"
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc8.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc9.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc10.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc11.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc12.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc13.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc14.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc15.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041020_155457975_qc16.webp"
             ]
           },
           {
             "id": "155991471|4",
             "scr": "YEfactory / Dunk PK 2.0 Batch / P300【PK2.0】 N1KE DUNK LOW CD2563 101 | 17 / 155991471",
-            "image": "img/NikeDunk/202041024_155991471.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471.webp",
             "productText": {
               "title": "Nike Dunk Low",
               "description": "Comfortable and durable sneaker",
               "size": "shoe size: 36 36.5 37.5 38 38.5 39 40 40.5 41 42 42.5 43 44 44.5 45 46 47"
             },
             "qcImages": [
-              "img/NikeDunk/202041024_155991471_qc1.jpg",
-              "img/NikeDunk/202041024_155991471_qc2.jpg",
-              "img/NikeDunk/202041024_155991471_qc3.jpg",
-              "img/NikeDunk/202041024_155991471_qc4.jpg",
-              "img/NikeDunk/202041024_155991471_qc5.jpg",
-              "img/NikeDunk/202041024_155991471_qc6.jpg",
-              "img/NikeDunk/202041024_155991471_qc7.jpg",
-              "img/NikeDunk/202041024_155991471_qc8.jpg",
-              "img/NikeDunk/202041024_155991471_qc9.jpg",
-              "img/NikeDunk/202041024_155991471_qc10.jpg",
-              "img/NikeDunk/202041024_155991471_qc11.jpg",
-              "img/NikeDunk/202041024_155991471_qc12.jpg",
-              "img/NikeDunk/202041024_155991471_qc13.jpg",
-              "img/NikeDunk/202041024_155991471_qc14.jpg"
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc8.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc9.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc10.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc11.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc12.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc13.webp",
+              "https://ik.imagekit.io/imgfolder/NikeDunk/202041024_155991471_qc14.webp"
             ]
           }
         ]
@@ -259,85 +259,85 @@
           {
             "id": "167097561|5",
             "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 DH6927-017 | 10 / 167097561",
-            "image": "img/AirJordan4/20241024_167097561.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561.webp",
             "productText": {
               "title": "Air Jordan 4",
               "description": "Classic and versatile sneaker",
               "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
             },
             "qcImages": [
-              "img/AirJordan4/20241024_167097561_qc1.jpg",
-              "img/AirJordan4/20241024_167097561_qc2.jpg",
-              "img/AirJordan4/20241024_167097561_qc3.jpg",
-              "img/AirJordan4/20241024_167097561_qc4.jpg",
-              "img/AirJordan4/20241024_167097561_qc5.jpg",
-              "img/AirJordan4/20241024_167097561_qc6.jpg",
-              "img/AirJordan4/20241024_167097561_qc7.jpg",
-              "img/AirJordan4/20241024_167097561_qc8.jpg"
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097561_qc8.webp"
             ]
           },
           {
             "id": "167097383|6",
             "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 RetroMidnight Navy” DH6927-140 | 10 / 167097383",
-            "image": "img/AirJordan4/20241024_167097383.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383.webp",
             "productText": {
               "title": "Air Jordan 4",
               "description": "Classic and versatile sneaker",
               "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
             },
             "qcImages": [
-              "img/AirJordan4/20241024_167097383.jpg",
-              "img/AirJordan4/20241024_167097383_qc1.jpg",
-              "img/AirJordan4/20241024_167097383_qc2.jpg",
-              "img/AirJordan4/20241024_167097383_qc3.jpg",
-              "img/AirJordan4/20241024_167097383_qc4.jpg",
-              "img/AirJordan4/20241024_167097383_qc5.jpg",
-              "img/AirJordan4/20241024_167097383_qc6.jpg",
-              "img/AirJordan4/20241024_167097383_qc7.jpg",
-              "img/AirJordan4/20241024_167097383_qc8.jpg"
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097383_qc8.webp"
             ]
           },
           {
             "id": "167097219|7",
             "src": "cool-kicks / KX-KZ Batch / C300 KX/KZ Batch Travis Scott Cactus Jack x Jordan Air Jordan 4 308497-406 | 10 / 167097219",
-            "image": "img/AirJordan4/20241024_167097219.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219.webp",
             "productText": {
               "title": "Air Jordan 4",
               "description": "Classic and versatile sneaker",
               "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
             },
             "qcImages": [
-              "img/AirJordan4/20241024_167097219.jpg",
-              "img/AirJordan4/20241024_167097219_qc1.jpg",
-              "img/AirJordan4/20241024_167097219_qc2.jpg",
-              "img/AirJordan4/20241024_167097219_qc3.jpg",
-              "img/AirJordan4/20241024_167097219_qc4.jpg",
-              "img/AirJordan4/20241024_167097219_qc5.jpg",
-              "img/AirJordan4/20241024_167097219_qc6.jpg",
-              "img/AirJordan4/20241024_167097219_qc7.jpg",
-              "img/AirJordan4/20241024_167097219_qc8.jpg"
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097219_qc8.webp"
               
             ]
           },
           {
             "id": "167097121|8",
             "src": "cool-kicks / KX-KZ Batch / C270 KX/KZ Batch Air Jordan 4 retro infrared DH6927-061 | 10 / 167097121",
-            "image": "img/AirJordan4/20241024_167097121.jpg",
+            "image": "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121.webp",
             "productText": {
               "title": "Air Jordan 4",
               "description": "Classic and versatile sneaker",
               "size": "shoe size: 40 40.5 41 42 42.5 43 44 44.5 45 45.5 46 47.5 48.5"
             },
             "qcImages": [
-              "img/AirJordan4/20241024_167097121.jpg",
-              "img/AirJordan4/20241024_167097121_qc1.jpg",
-              "img/AirJordan4/20241024_167097121_qc2.jpg",
-              "img/AirJordan4/20241024_167097121_qc3.jpg",
-              "img/AirJordan4/20241024_167097121_qc4.jpg",
-              "img/AirJordan4/20241024_167097121_qc5.jpg",
-              "img/AirJordan4/20241024_167097121_qc6.jpg",
-              "img/AirJordan4/20241024_167097121_qc7.jpg",
-              "img/AirJordan4/20241024_167097121_qc8.jpg"
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc1.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc2.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc3.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc4.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc5.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc6.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc7.webp",
+              "https://ik.imagekit.io/imgfolder/AirJordan4/20241024_167097121_qc8.webp"
               
             ]
           }
