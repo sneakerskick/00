@@ -67,118 +67,193 @@
   </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const productId = urlParams.get("id");
-      console.log("Product ID from URL:", productId);
   
-      if (!productId) {
-        console.error("No product ID provided");
+  document.addEventListener("DOMContentLoaded", () => {
+  const CACHE_NAME = "productDetailsCache";
+  const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
+
+  if (!productId) {
+    console.error("No product ID provided");
+    return;
+  }
+
+  // Function to open IndexedDB
+  function openIndexedDB() {
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(CACHE_NAME, 1);
+
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => resolve(request.result);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        db.createObjectStore("products", { keyPath: "id" });
+        db.createObjectStore("categories", { keyPath: "name" });
+      };
+    });
+  }
+
+  // Function to get cached data
+  function getCachedData(db, storeName, key) {
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(storeName, "readonly");
+      const store = transaction.objectStore(storeName);
+      const request = store.get(key);
+
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+  }
+
+  // Function to set data in the cache
+  function setCachedData(db, storeName, data) {
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(storeName, "readwrite");
+      const store = transaction.objectStore(storeName);
+      const request = store.put(data);
+
+      request.onsuccess = () => resolve();
+      request.onerror = () => reject(request.error);
+    });
+  }
+
+  // Function to check if cached data is still valid
+  function isCacheValid(timestamp) {
+    const now = Date.now();
+    return now - timestamp < CACHE_EXPIRATION_MS;
+  }
+
+  // Main function to fetch and cache product details
+  async function fetchAndCacheProductDetails() {
+    try {
+      const db = await openIndexedDB();
+
+      // Get cached product
+      let cachedProduct = await getCachedData(db, "products", productId);
+      const cachedCategories = await getCachedData(db, "categories", "all");
+
+      if (cachedProduct && cachedCategories && isCacheValid(cachedProduct.timestamp)) {
+        console.log("Using cached product data");
+        displayProductDetails(cachedProduct.data);
+        updateNavigationLinks(cachedProduct.data, cachedCategories.data);
         return;
       }
-  
-      // Fetch the product data from the JSON file
-      fetch("products.json")
-        .then(response => response.json())
-        .then(data => {
-          console.log("Fetched data:", data); 
-          const product = findProductById(data.categories, productId);
-          if (!product) {
-            console.error("Product not found");
-            return;
-          }
-          displayProductDetails(product);
 
-          // Update the navigation links
-    updateNavigationLinks(product, data.categories);
-        })
-        .catch(error => console.error("Error fetching product data:", error));
-  
-      // Find a product by ID across all categories
-      function findProductById(categories, id) {
-  for (const category of categories) {
-    const product = category.products.find(item => item.id === id);
-    if (product) {
-      console.log("Found product:", product); // Add this line
-      return product;
+      // If no valid cache is found, fetch data from JSON
+      const response = await fetch("products.json");
+      const data = await response.json();
+
+      const product = findProductById(data.categories, productId);
+      if (!product) {
+        console.error("Product not found");
+        return;
+      }
+
+      // Cache the fetched product data
+      const categories = data.categories;
+      const cacheData = {
+        id: productId,
+        data: product,
+        timestamp: Date.now(),
+      };
+
+      await setCachedData(db, "products", cacheData);
+      await setCachedData(db, "categories", { name: "all", data: categories });
+
+      // Display the fetched data
+      displayProductDetails(product);
+      updateNavigationLinks(product, categories);
+      console.log("Fetched new data and updated cache");
+    } catch (error) {
+      console.error("Failed to load product data:", error);
     }
   }
-  console.error("No product matches the given ID:", id); // Add this line
-  return null;
-}
-  
-      // Display the product details on the detail page
-      function displayProductDetails(product) {
-        document.getElementById("productImage").src = product.image;
-        document.getElementById("productTitle").textContent = product.productText.title;
-        document.getElementById("productDescription").textContent = product.productText.description;
-        document.getElementById("productSize").textContent = product.productText.size;
-  
-        // Populate the QC images section
-        const qcImgContainer = document.getElementById("qcImgContainer");
-        qcImgContainer.innerHTML = ""; // Clear any existing content
-        product.qcImages.forEach(imgSrc => {
-          const imgElement = document.createElement("img");
-          imgElement.src = imgSrc;
-          qcImgContainer.appendChild(imgElement);
+
+  fetchAndCacheProductDetails();
+
+  // Function to find a product by ID across all categories
+  function findProductById(categories, id) {
+    for (const category of categories) {
+      const product = category.products.find(item => item.id === id);
+      if (product) {
+        return product;
+      }
+    }
+    return null;
+  }
+
+  // Function to display product details
+  function displayProductDetails(product) {
+    document.getElementById("productImage").src = product.image;
+    document.getElementById("productTitle").textContent = product.productText.title;
+    document.getElementById("productDescription").textContent = product.productText.description;
+    document.getElementById("productSize").textContent = product.productText.size;
+
+    const qcImgContainer = document.getElementById("qcImgContainer");
+    qcImgContainer.innerHTML = ""; // Clear any existing content
+    product.qcImages.forEach(imgSrc => {
+      const imgElement = document.createElement("img");
+      imgElement.src = imgSrc;
+      qcImgContainer.appendChild(imgElement);
+    });
+  }
+
+  // Function to update the navigation links
+  function updateNavigationLinks(product, categories) {
+    const homeLink = document.querySelector(".current-product a:nth-child(1)");
+    homeLink.href = "index.html";
+
+    const categoryLink = document.querySelector(".current-product a:nth-child(2)");
+    const category = categories.find(cat => cat.products.some(prod => prod.id === product.id));
+
+    if (category) {
+      categoryLink.href = `categories.html?category=${category.name}`;
+      categoryLink.textContent = category.name;
+    }
+
+    const productLink = document.querySelector(".current-product a:nth-child(3)");
+    productLink.href = `detail.html?id=${product.id}`;
+    productLink.textContent = product.productText.title;
+  }
+});
+
+
+  // Share Function Code
+  document.getElementById("shareButton").addEventListener("click", function () {
+      const url = window.location.href;
+
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          url: url
+        }).then(() => {
+          console.log("Thanks for sharing!");
+        }).catch((error) => {
+          console.error("Error sharing:", error);
         });
+      } else {
+        // Fallback: Copy the URL to the clipboard
+        copyToClipboard(url);
+        alert("URL copied to clipboard! You can share it manually.");
       }
     });
 
-    // Share Function Code
-    document.getElementById("shareButton").addEventListener("click", function () {
-    const url = window.location.href;
-
-    // Check if Web Share API is supported
-    if (navigator.share) {
-      navigator.share({
-        title: document.title,
-        url: url
-      }).then(() => {
-        console.log("Thanks for sharing!");
-      }).catch((error) => {
-        console.error("Error sharing:", error);
-      });
-    } else {
-      // Fallback: Copy the URL to the clipboard
-      copyToClipboard(url);
-      alert("URL copied to clipboard! You can share it manually.");
-    }
-  });
-
-  // Function to copy text to the clipboard
+    // Function to copy text to the clipboard
   function copyToClipboard(text) {
-    const tempInput = document.createElement("input");
-    tempInput.style.position = "absolute";
-    tempInput.style.left = "-9999px";
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-  }
+      const tempInput = document.createElement("input");
+      tempInput.style.position = "absolute";
+      tempInput.style.left = "-9999px";
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+    }
 
-// Function to update the navigation links
-function updateNavigationLinks(product, categories) {
-  // Update the 'Home' link
-  const homeLink = document.querySelector(".current-product a:nth-child(1)");
-  homeLink.href = "index.html"; // Set to your home page URL
-
-  // Update the 'Current Category' link
-  const categoryLink = document.querySelector(".current-product a:nth-child(2)");
-  const category = categories.find(cat => cat.products.some(prod => prod.id === product.id));
-  
-  if (category) {
-    categoryLink.href = `categories.html?category=${category.name}`; // Link to the category page
-    categoryLink.textContent = category.name; // Set the category name as the link text
-  }
-
-  // Update the 'Current Product' link
-  const productLink = document.querySelector(".current-product a:nth-child(3)");
-  productLink.href = `detail.html?id=${product.id}`; // Link to the current product
-  productLink.textContent = product.productText.title; // Set the product title as the link text
-}
-  </script>
+    </script>
   
 </body>
 </html>
