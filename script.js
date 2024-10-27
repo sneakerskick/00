@@ -158,10 +158,21 @@ async function getCachedData(jsonUrl) {
 }
 
 // Function to update the product cards on the homepage using cached data
+// Function to update the product cards on the homepage using cached data
 function updateProductCardsWithCache(data) {
+    if (!data || !data.categories || !Array.isArray(data.categories)) {
+        console.error("Invalid data format: 'categories' not found");
+        return;
+    }
+
     const productCards = document.querySelectorAll('.product-card');
     
     data.categories.forEach(category => {
+        if (!category.products || !Array.isArray(category.products)) {
+            console.error("Invalid category format: 'products' not found");
+            return;
+        }
+
         category.products.forEach(product => {
             // Find the corresponding product card by matching the 'id'
             productCards.forEach(card => {
