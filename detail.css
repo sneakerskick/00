@@ -40,6 +40,8 @@ img{
 }
 .qc-img-container img{
     margin: 20px 5px;
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 5px;
 }
 /* Style for the share button */
 .share-button {
