@@ -46,7 +46,7 @@
     </div>
 
     <div class="current-category">
-        <h5><a href="">Home</a> > <a href="">Current Category</a></h5>
+        <h5><a href="">Home</a> > <a href="" class="current-category-txt">Current Category</a></h5>
     </div>
 
      <!-- Category Products Section -->
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const CACHE_DB_NAME = "ProductCacheDB";
   const CACHE_STORE_NAME = "products";
 // Updated cache expiration time: 24 hours in milliseconds
-const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; 
+const CACHE_EXPIRATION_MS = 60 * 1000; 
 
 // Open the IndexedDB
 function openDatabase() {
@@ -150,7 +150,9 @@ async function getCachedCategoryData(jsonUrl, categoryName) {
 // Updated function to fetch and display products for a specific category
 
 const urlParams = new URLSearchParams(window.location.search);
-    const categoryName = urlParams.get("category");
+const categoryName = urlParams.get("category");
+const currentPage = parseInt(urlParams.get("page")) || 1;
+const productsPerPage = 60;
 
     if (!categoryName) {
         console.error("No category provided");
@@ -161,46 +163,127 @@ const urlParams = new URLSearchParams(window.location.search);
 
     getCachedCategoryData(jsonFilePath, categoryName)
         .then(category => {
-            displayCategoryProducts(category);
+            console.log(category.products, categoryName);
+            displayCategoryProducts(category.products, currentPage);
             updateCategoryNavigationLinks(category);
         })
         .catch(error => {
             console.error("Failed to load category data:", error);
         });
 
-    // Function to display the products in the category
-    function displayCategoryProducts(category) {
-        const productGrid = document.getElementById("productGrid");
-        productGrid.innerHTML = ""; // Clear existing content
-        category.products.forEach(product => {
-            const card = document.createElement("div");
-            card.classList.add("card");
-            card.innerHTML = `
-                <a href="detail.html?id=${product.id}">
-                    <img class="lazy" data-src="${product.image}" alt="${product.productText.title}" src="">
-                </a>
-            `;
-            productGrid.appendChild(card);
-        });
-        // Call the lazy loading function for the newly added images
-        lazyLoadImages();
+  // Display products for a specific category and page
+  function displayCategoryProducts(products, page) {
+    const productGrid = document.getElementById("productGrid");
+    productGrid.innerHTML = ""; // Clear existing content
+
+    // Calculate start and end index for products to display on the current page
+    const startIndex = (page - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    const productsToShow = products.slice(startIndex, endIndex);
+
+    productsToShow.forEach(product => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <a href="detail.html?id=${product.id}">
+          <img class="lazy" data-src="${product.image}" alt="${product.productText.title}" src="">
+        </a>
+      `;
+      productGrid.appendChild(card);
+    });
+
+    // Call the lazy loading function for the newly added images
+    lazyLoadImages();
+  }
+
+  // Setup pagination controls
+  function setupPagination(totalProducts, currentPage) {
+    const paginationContainer = document.getElementById("paginationContainer");
+    paginationContainer.innerHTML = ""; // Clear existing pagination
+
+    const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+    // Create 'Previous' button
+    const prevButton = createPaginationButton("«", currentPage - 1, currentPage > 1);
+    paginationContainer.appendChild(prevButton);
+
+    // Create numbered page buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = createPaginationButton(i, i, i !== currentPage);
+      paginationContainer.appendChild(pageButton);
     }
 
+    // Create 'Next' button
+    const nextButton = createPaginationButton("»", currentPage + 1, currentPage < totalPages);
+    paginationContainer.appendChild(nextButton);
 
-      // Function to update the navigation links
-        function updateCategoryNavigationLinks(category) {
-          // Update the 'Home' link
-          const homeLink = document.querySelector(".current-category a:nth-child(1)");
-          homeLink.href = "index.html"; // Set to your home page URL
+    // Add a 'Go to Page' input and confirm button
+    const inputContainer = document.createElement("div");
+    inputContainer.classList.add("goto-page");
+    inputContainer.innerHTML = `
+      in total ${totalPages} pages to 
+      <input type="number" min="1" max="${totalPages}" value="${currentPage}" id="gotoPageInput">
+      page <button id="gotoPageConfirm">Confirm</button>
+    `;
+    paginationContainer.appendChild(inputContainer);
 
-          // Update the 'Current Category' link
-          const categoryLink = document.querySelector(".current-category a:nth-child(2)");
-          categoryLink.href = `categories.html?category=${category.name}`; // Link to the current category page
-          categoryLink.textContent = category.name; // Set the category name as the link text
+    // Event listener for 'Confirm' button
+    document.getElementById("gotoPageConfirm").addEventListener("click", () => {
+      const gotoPage = parseInt(document.getElementById("gotoPageInput").value);
+      if (gotoPage >= 1 && gotoPage <= totalPages) {
+        navigateToPage(gotoPage);
+      }
+    });
+  }
+
+    // Create a pagination button element
+    function createPaginationButton(text, page, isEnabled) {
+    const button = document.createElement("button");
+    button.textContent = text;
+    button.disabled = !isEnabled;
+    if (isEnabled) {
+      button.addEventListener("click", () => navigateToPage(page));
+    }
+    return button;
+  }
+
+  // Navigate to a specific page
+  function navigateToPage(page) {
+    const newUrl = `categories.html?category=${categoryName}&page=${page}`;
+    window.location.href = newUrl; // Update the URL
+  }
+
+    // Function to update the navigation links
+    function updateCategoryNavigationLinks(category) {
+        console.log("Updating navigation links for category:", category.id);
+        console.log("Updating navigation links for category:", category ? category.id : "undefined");
+
+        // Update the 'Home' link
+        const homeLink = document.querySelector(".current-category a:nth-child(1)");
+        if (homeLink) {
+            homeLink.href = "index.html"; // Set to your home page URL
+            console.log("Home link updated.");
+        } else {
+            console.error("Home link not found.");
         }
 
-      // Lazy Loading Function
-      function lazyLoadImages() {
+        // Update the 'Current Category' link
+        const categoryLink = document.querySelector(".current-category-txt");
+        if (categoryLink) {
+            // Get the current page number from the URL or default to 1
+            const currentPage = parseInt(new URLSearchParams(window.location.search).get("page")) || 1;
+
+            // Update the category link with both the category name and the current page
+            categoryLink.href = `categories.html?category=${category.id}&page=${currentPage}`; // Link to the current category page with pagination
+            categoryLink.textContent = category.name ? category.name : category.id; // Set the category name as the link text
+            console.log("Category link updated:", categoryLink.href);
+        } else {
+            console.error("Category link not found.");
+        }
+    }
+
+// Lazy Loading Function
+function lazyLoadImages() {
     const lazyImages = document.querySelectorAll("img.lazy");
 
     if ("IntersectionObserver" in window) {
