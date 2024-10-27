@@ -157,12 +157,37 @@ async function getCachedData(jsonUrl) {
     }
 }
 
+// Function to update the product cards on the homepage using cached data
+function updateProductCardsWithCache(data) {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    data.categories.forEach(category => {
+        category.products.forEach(product => {
+            // Find the corresponding product card by matching the 'id'
+            productCards.forEach(card => {
+                const linkElement = card.querySelector('a');
+                const imgElement = card.querySelector('img');
+                const productId = linkElement.getAttribute('href').split('id=')[1].split('|')[0];
+
+                if (productId === product.id) {
+                    // Use the cached data to set the image source
+                    imgElement.setAttribute('data-src', product.image);
+                    imgElement.setAttribute('alt', product.productText.title);
+                    // Optionally, load the image immediately
+                    imgElement.src = product.image; 
+                }
+            });
+        });
+    });
+}
+
 // Usage example
 const jsonFilePath = "products.json";
 getCachedData(jsonFilePath)
     .then(data => {
         console.log("Product Data:", data);
         // Process the data as needed
+        updateProductCardsWithCache(data); // Update the product cards
     })
     .catch(error => {
         console.error("Failed to load product data:", error);
