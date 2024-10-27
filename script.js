@@ -71,7 +71,7 @@
 
 const CACHE_DB_NAME = "ProductCacheDB";
 const CACHE_STORE_NAME = "products";
-const CACHE_EXPIRATION_MS = 60 * 1000; // 24 hours
+const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // Open the IndexedDB
 function openDatabase() {
