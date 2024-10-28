@@ -40,7 +40,7 @@ img{
 }
 .qc-img-container img{
     margin: 20px 5px;
-    border-bottom: 1px solid var(--secondary);
+    border-bottom: 1.5px solid #A3A3A3;
     padding-bottom: 5px;
 }
 /* Style for the share button */
