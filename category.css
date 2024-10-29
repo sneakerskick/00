@@ -21,14 +21,11 @@ img{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    align-content: center;
     justify-content: center;
-    text-align: center;
 
 }
 .category-links ul li {
     margin: 0 1em 15px;
-    text-align: center;
 }
 .category-links ul li a{
     color: #000;
