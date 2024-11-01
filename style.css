@@ -20,6 +20,21 @@ body{
 }
 /* mobile styles */
 /* header styles */
+.notice{
+    background-color: var(--secondary);
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.notice p{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+    color: #36454F;
+    font-size: 10px;
+}
 .top-bar{
     display: flex;
     background-color: var(--primary);
@@ -222,6 +237,9 @@ footer p{
 }
 /* small mobile devices */
 @media (max-width: 400px){
+    .notice p{
+        font-size: 10px;
+    }
     .top-bar p{
         font-size: 14px;
     }
