@@ -67,7 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const CACHE_DB_NAME = "ProductCacheDB";
   const CACHE_STORE_NAME = "products";
 // Updated cache expiration time: 24 hours in milliseconds
-const CACHE_EXPIRATION_MS = 60 * 1000; 
+// const CACHE_EXPIRATION_MS = 60 * 1000; 
+const CACHE_EXPIRATION_MS = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
 
 // Open the IndexedDB
 function openDatabase() {
