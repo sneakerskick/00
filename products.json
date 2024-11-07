@@ -111,19 +111,6 @@
             ]
           },
           {
-            "id": "dunkLow",
-            "image": "https://ik.imagekit.io/imgfolder/dunklow.webp",
-            "src": "hi",
-            "productText": {
-              "title": "Nike Dunk",
-              "description": "High quality and stylish sneaker",
-              "size": "shoe size: 36, 37, 38, 39, ... 45."
-            },
-            "qcImages": [
-              "https://ik.imagekit.io/imgfolder/flashSale/dunkqc.webp"
-            ]
-          },
-          {
             "id": "aj4bjt",
             "image": "https://ik.imagekit.io/imgfolder/aj1bjt.webp",
             "productText": {

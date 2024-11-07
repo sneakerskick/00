@@ -207,6 +207,12 @@ a.see-more{
     color: #000;
     display: block;
     margin: 15px auto;
+    width: fit-content;
+    background-color: var(--primary);
+    color: #fff;
+    padding: .5em 1.5em;
+    font-size: 1.2em;
+    letter-spacing: .8px;
 }
 footer{
     color: #fff;
@@ -214,6 +220,7 @@ footer{
     text-align: center;
     padding: 5px 0;
     position: relative;
+    margin-top: 3em;
 }
 footer p{
     margin: 4px 0;
@@ -236,7 +243,7 @@ footer p{
     text-align: center;
 }
 /* small mobile devices */
-@media (max-width: 400px){
+@media (max-width: 415px){
     .notice p{
         font-size: 10px;
     }
