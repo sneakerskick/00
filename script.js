@@ -203,3 +203,18 @@ getCachedData(jsonFilePath)
     .catch(error => {
         console.error("Failed to load product data:", error);
     });
+
+
+// Google Analytics setup
+(function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-BTF3Z0KT38";
+    document.head.appendChild(script);
+  
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BTF3Z0KT38');
+  })();
+  
