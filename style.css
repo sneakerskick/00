@@ -260,9 +260,13 @@ footer p{
         padding: 10px;
         gap: 10px;
     }
+    .category-products .product-card{
+        min-width: 100px;
+        height: 130px;
+    }
 }
 /* extra small mobile devices */
-@media (max-width: 351px){
+@media (max-width: 391px){
     .top-bar p{
         font-size: 12px;
     }
@@ -279,7 +283,8 @@ footer p{
         padding: 10px;
     }
     .category-products .product-card{
-        flex: 1 0 140px;
+        min-width: 100px;
+        height: 110px;
     }
 }
 /* small tablet styles */
