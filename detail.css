@@ -59,3 +59,14 @@ img{
     height: 16px;
     transform: scale(1.5);
 }
+@media (min-width: 960px){
+    .qc-img-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+    .qc-img-container img{
+        height: 400px;
+    }
+}

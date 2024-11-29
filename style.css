@@ -97,20 +97,21 @@ nav ul li:nth-child(2):hover .categories-submenu ul li{
     border: 1px solid #000;
 } */
 /* flash sale section */
-.flash-sale-banner {
 
+.flash-sale-banner {
     width: 80%;
+    margin: 2em auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
+    align-items: center; /* Vertically centers the content  */
     background-color: var(--secondary);
-    margin: 20px auto;
     padding: 20px;
-    align-items: center; /* Vertically centers the content */
 }
 
 .flash-sale-banner-txt {
     width: 50%;
     text-align: center;
+
 }
 .flash-sale-banner-txt h1{
     font-size: 2em;
@@ -151,8 +152,7 @@ nav ul li:nth-child(2):hover .categories-submenu ul li{
     overflow-x: auto;
     scroll-behavior: smooth;
     cursor: grab;
-    padding: 20px;
-    padding-top: 0;
+    margin-left: 20px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -194,7 +194,10 @@ nav ul li:nth-child(2):hover .categories-submenu ul li{
     padding: 20px;
 }
 .category-products .product-card{
-    flex: 1 0 151px;
+    /* flex: 1 0 151px; */
+    min-width: 100px;
+    height: 140px;
+
 }
 .category-products .product-card img{
     width: 100%;
@@ -285,9 +288,42 @@ footer p{
 }
 /* large tablets and laptops */
 @media (min-width: 960px) {
-    
+    .flash-sale{
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 75%;
+        margin: 2em auto;
+    }
+    .flash-sale-banner{
+        overflow: hidden;
+    height: 320px;
+    font-size: 0;
+    position: relative;
+    justify-content: space-between;
+    }
+    .flash-sale-banner-txt{
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 16px;
+    }
+    .flash-sale-banner-img{
+        width: 400px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .category-products .product-card{
+        min-width: 200px;
+        height: 250px;
+    }
 }
 /* desktop styles */
 @media (min-width: 1200px) {
-    
+    .flash-sale{
+        width: 75%;
+    }
 }
